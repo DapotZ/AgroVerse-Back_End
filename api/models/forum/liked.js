@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../../config/config").sequelize;
 const User = require("../user/user");
-const Post = require("../forum/posts");
+const Post = require("./posts");
 
 const PostLike = sequelize.define(
   "PostLike",
