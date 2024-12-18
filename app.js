@@ -14,11 +14,12 @@ const corsOptions = {
   methods: "GET,POST,PUT,DELETE", // Metode HTTP yang diizinkan
   allowedHeaders: ["Content-Type", "Authorization"], // Header yang diizinkan
 };
-app.use(cors(corsOptions));
 
+app.use(cors(corsOptions));
 app.use(express.json());
 
 authenticateDB();
+
 // Import routes
 const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);
@@ -41,8 +42,7 @@ app.use("/api/webinar", WebinarRoutes);
 const UserRoutes = require("./routes/user");
 app.use("/api/user", UserRoutes);
 
-// Menjalankan server
-const PORT = process.env.PORT || 5000; // Ganti dengan port lain yang tidak digunakan oleh database
-app.listen(PORT, () => {
-  console.log(`Server berjalan di http://localhost:${PORT}`);
-});
+// For Vercel serverless functions, we use module.exports to handle requests and responses.
+module.exports = (req, res) => {
+  app(req, res);
+};
