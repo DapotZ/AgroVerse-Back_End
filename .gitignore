@@ -1,2 +1,26 @@
-node_modules
+# Node modules folder
+node_modules/
+
+# Environment variables file
 .env
+
+# Logs folder
+logs/
+*.log
+*.log.*
+
+# OS specific files (Windows and macOS)
+Thumbs.db
+.DS_Store
+
+# Build directory
+/dist
+
+# Package-lock file generated during install
+package-lock.json
+
+# Vercel-specific folder
+.vercel
+
+# npm-debug file
+npm-debug.log
