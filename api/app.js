@@ -41,8 +41,8 @@ app.use("/api/webinar", WebinarRoutes);
 const UserRoutes = require("./routes/user");
 app.use("/api/user", UserRoutes);
 
-// Menjalankan server
-const PORT = process.env.PORT || 5000; // Ganti dengan port lain yang tidak digunakan oleh database
-app.listen(PORT, () => {
-  console.log("Server berjalan di http://localhost:${PORT}");
-});
+// // Menjalankan server
+// const PORT = process.env.PORT || 5000; // Ganti dengan port lain yang tidak digunakan oleh database
+// app.listen(PORT, () => {
+//   console.log("Server berjalan di http://localhost:${PORT}");
+// });
