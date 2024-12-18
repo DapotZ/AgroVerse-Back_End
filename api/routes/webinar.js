@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Webinar = require("models/webinar/webinar");
-const { authenticateUser, checkRole } = require("middleware/auth");
+const Webinar = require("../models/webinar/webinar");
+const { authenticateUser, checkRole } = require("../middleware/auth");
 
 router.get("/", async (req, res) => {
   try {

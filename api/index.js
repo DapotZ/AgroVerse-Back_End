@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { authenticateDB } = require("config/config");
+const { authenticateDB } = require("./config/config");
 const dotenv = require("dotenv");
 
 // Setup environment variables

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Category = require("models/product/category"); // Pastikan model `Category` diimpor
-const { authenticateUser, checkRole } = require("middleware/auth");
+const Category = require("../models/product/category"); // Pastikan model `Category` diimpor
+const { authenticateUser, checkRole } = require("../middleware/auth");
 
 // ===== CREATE =====
 // Tambah Kategori (Hanya Admin)

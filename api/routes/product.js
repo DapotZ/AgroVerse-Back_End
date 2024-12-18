@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const Product = require("models/product/product"); // Pastikan model terimport
-const ProductImage = require("models/product/gambarProduct");
-const Rating = require("models/product/rating");
-const Category = require("models/product/category");
-const ProductRating = require("models/product/rating");
-const User = require("models/user/user"); // Import User model
+const Product = require("../models/product/product"); // Pastikan model terimport
+const ProductImage = require("../models/product/gambarProduct");
+const Rating = require("../models/product/rating");
+const Category = require("../models/product/category");
+const ProductRating = require("../models/product/rating");
+const User = require("../models/user/user"); // Import User model
 
-const { authenticateUser, checkRole } = require("middleware/auth");
+const { authenticateUser, checkRole } = require("../middleware/auth");
 
 // ===== CREATE =====
 // Tambah Produk
