@@ -9,12 +9,7 @@ dotenv.config();
 // Inisialisasi Express
 const app = express();
 
-const corsOptions = {
-  origin: "https://agro-verse-front-end-three.vercel.app", // Ganti dengan URL frontend Anda
-  methods: "GET,POST,PUT,DELETE", // Metode HTTP yang diizinkan
-  allowedHeaders: ["Content-Type", "Authorization"], // Header yang diizinkan
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
