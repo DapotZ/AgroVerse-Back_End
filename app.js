@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:5173", // Ganti dengan URL frontend Anda
+  origin: "https://agro-verse-front-end-three.vercel.app", // Ganti dengan URL frontend Anda
   methods: "GET,POST,PUT,DELETE", // Metode HTTP yang diizinkan
   allowedHeaders: ["Content-Type", "Authorization"], // Header yang diizinkan
 };
