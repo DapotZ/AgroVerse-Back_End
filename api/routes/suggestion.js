@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/user/user");
-const Suggestion = require("../models/saran/suggestion");
-const { authenticateUser, checkRole } = require("../middleware/auth");
+const User = require("models/user/user");
+const Suggestion = require("models/saran/suggestion");
+const { authenticateUser, checkRole } = require("middleware/auth");
 
 router.post("/", authenticateUser, checkRole("user"), async (req, res) => {
   const { user_id, message } = req.body;

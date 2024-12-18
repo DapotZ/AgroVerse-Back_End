@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/user/user");
-const Comment = require("../models/forum/comment");
-const Post = require("../models/forum/posts");
-const PostLike = require("../models/forum/liked");
-const ProductRating = require("../models/product/rating");
-const { authenticateUser, checkRole } = require("../middleware/auth");
+const User = require("models/user/user");
+const Comment = require("models/forum/comment");
+const Post = require("models/forum/posts");
+const PostLike = require("models/forum/liked");
+const ProductRating = require("models/product/rating");
+const { authenticateUser, checkRole } = require("middleware/auth");
 
 router.get("/", authenticateUser, checkRole("admin"), async (req, res) => {
   try {

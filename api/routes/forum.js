@@ -1,11 +1,11 @@
 const express = require("express");
 const { Sequelize } = require("sequelize");
 const router = express.Router();
-const Post = require("../models/forum/posts");
-const PostLike = require("../models/forum/liked");
-const Comment = require("../models/forum/comment");
-const User = require("../models/user/user");
-const { authenticateUser } = require("../middleware/auth");
+const Post = require("models/forum/posts");
+const PostLike = require("models/forum/liked");
+const Comment = require("models/forum/comment");
+const User = require("models/user/user");
+const { authenticateUser } = require("middleware/auth");
 
 // Route untuk menambahkan postingan baru
 router.post("/posts/create", authenticateUser, async (req, res) => {
