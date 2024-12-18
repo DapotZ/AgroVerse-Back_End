@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { authenticateDB } = require("./config/config");
+const { authenticateDB } = require("../config/config");
 const dotenv = require("dotenv");
 
 // Setup environment variables
@@ -20,25 +20,25 @@ app.use(express.json());
 
 authenticateDB();
 // Import routes
-const authRoutes = require("./routes/auth");
+const authRoutes = require("../routes/auth");
 app.use("/api/auth", authRoutes);
 
-const ForumRoutes = require("./routes/forum");
+const ForumRoutes = require("../routes/forum");
 app.use("/api/forum", ForumRoutes);
 
-const ProductRoutes = require("./routes/product");
+const ProductRoutes = require("../routes/product");
 app.use("/api/product", ProductRoutes);
 
-const CategoryRoutes = require("./routes/category");
+const CategoryRoutes = require("../routes/category");
 app.use("/api/category", CategoryRoutes);
 
-const SuggestionRoutes = require("./routes/suggestion");
+const SuggestionRoutes = require("../routes/suggestion");
 app.use("/api/suggestion", SuggestionRoutes);
 
-const WebinarRoutes = require("./routes/webinar");
+const WebinarRoutes = require("../routes/webinar");
 app.use("/api/webinar", WebinarRoutes);
 
-const UserRoutes = require("./routes/user");
+const UserRoutes = require("../routes/user");
 app.use("/api/user", UserRoutes);
 
 // Menjalankan server
